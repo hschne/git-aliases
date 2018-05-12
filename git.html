@@ -1,0 +1,471 @@
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <link href="git.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">Git Aliases Cheatsheet<p>Inspired by the Oh My Zsh Git Plugin. Print or download the PDF.</p></div>
+<div class="container">
+    <table>
+        <col width="15%">
+        <col width="85%">
+        <tr>
+            <th colspan="2">Add &amp; Commit</th>
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>git</td>
+        </tr>
+        <tr>
+            <td>ga</td>
+            <td>git add</td>
+        </tr>
+        <tr>
+            <td>gaa</td>
+            <td>git add --all</td>
+        </tr>
+        <tr>
+            <td>gapa</td>
+            <td>git add --patch</td>
+        </tr>
+        <tr>
+            <td>gc</td>
+            <td>git commit -v</td>
+        </tr>
+        <tr>
+            <td>gc!</td>
+            <td>git commit -v --amend</td>
+        </tr>
+        <tr>
+            <td>gca</td>
+            <td>git commit -v -a</td>
+        </tr>
+        <tr>
+            <td>gca!</td>
+            <td>git commit -v -a --amend</td>
+        </tr>
+        <tr>
+            <td>gcan!</td>
+            <td>git commit -v -a --no-edit --amend</td>
+        </tr>
+        <tr>
+            <td>gcans!</td>
+            <td>git commit -v -a -s --no-edit --amend</td>
+        </tr>
+        <tr>
+            <td>gcam</td>
+            <td>git commit -a -m</td>
+        </tr>
+        <tr>
+            <td>gcsm</td>
+            <td>git commit -s -m</td>
+        </tr>
+        <tr>
+            <td>gcmsg</td>
+            <td>git commit -m</td>
+        </tr>
+        <tr>
+            <td>gcs</td>
+            <td>git commit -S</td>
+        </tr>
+    </table>
+
+    <table>
+
+        <tr>
+            <th colspan="2">Checkout &amp; Branch</th>
+        </tr>
+        <tr>
+            <td>gco</td>
+            <td>git checkout</td>
+        </tr>
+        <tr>
+            <td>gcd</td>
+            <td>git checkout develop</td>
+        </tr>
+        <tr>
+            <td>gcm</td>
+            <td>git checkout master</td>
+        </tr>
+        <tr>
+            <td>gcb</td>
+            <td>git checkout -b</td>
+        </tr>
+        <tr>
+            <td>gbnm</td>
+            <td>git branch --no-merged</td>
+        </tr>
+        <tr>
+            <td>gbr</td>
+            <td>git branch --remote</td>
+        </tr>
+        <tr>
+            <td>ggsup</td>
+            <td>git branch --set-upstream-to=origin/$(current_branch)</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Clone, Push, Fetch, Pull and Merge</th>
+        </tr>
+        <tr>
+            <td>gcl</td>
+            <td>git clone --recursive</td>
+        </tr>
+        <tr>
+            <td>gp</td>
+            <td>git push</td>
+        </tr>
+        <tr>
+            <td>ggp</td>
+            <td>git push origin $(current_branch)</td>
+        </tr>
+        <tr>
+            <td>ggpush</td>
+            <td>git push origin $(current_branch)</td>
+        </tr>
+        <tr>
+            <td>gpsup</td>
+            <td>git push --set-upstream origin $(current_branch)</td>
+        </tr>
+        <tr>
+            <td>gpoat</td>
+            <td>git push origin --all &amp;&amp; git push origin --tags</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>git fetch</td>
+        </tr>
+        <tr>
+            <td>gfa</td>
+            <td>git fetch --all --prune</td>
+        </tr>
+        <tr>
+            <td>gfo</td>
+            <td>git fetch origin</td>
+        </tr>
+        <tr>
+            <td>ggl</td>
+            <td>git pull origin $(current_branch)</td>
+        </tr>
+        <tr>
+            <td>ggpull</td>
+            <td>git pull origin $(current_branch)</td>
+        </tr>
+        <tr>
+            <td>ggpur</td>
+            <td>git pull --rebase origin $(current_branch)</td>
+        </tr>
+        <tr>
+            <td>glum</td>
+            <td>git pull upstream master</td>
+        </tr>
+        <tr>
+            <td>gup</td>
+            <td>git pull --rebase</td>
+        </tr>
+        <tr>
+            <td>ggpnp</td>
+            <td>git pull origin $(current_branch) &amp;&amp; git push origin $(current_branch)</td>
+        </tr>
+        <tr>
+            <td>gm</td>
+            <td>git merge</td>
+        </tr>
+        <tr>
+            <td>gmom</td>
+            <td>Git merge origin/master</td>
+        </tr>
+        <tr>
+            <td>gmt</td>
+            <td>git mergetool --no-prompt</td>
+        </tr>
+        <tr>
+            <td>gmtvim</td>
+            <td>Git mergetool --no-prompt --tool=vimdiff</td>
+        </tr>
+        <tr>
+            <td>gmum</td>
+            <td>Git merge upstream/master</td>
+        </tr>
+        <tr>
+            <td>gma</td>
+            <td>Git merge --abort</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Remotes</th>
+        </tr>
+        <tr>
+            <td>gr</td>
+            <td>git remote</td>
+        </tr>
+        <tr>
+            <td>grv</td>
+            <td>git remote -v</td>
+        </tr>
+        <tr>
+            <td>grmv</td>
+            <td>git remote rename</td>
+        </tr>
+        <tr>
+            <td>grrm</td>
+            <td>git remote remove</td>
+        </tr>
+        <tr>
+            <td>grset</td>
+            <td>git remote set-url</td>
+        </tr>
+        <tr>
+            <td>grup</td>
+            <td>git remote update</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Work in Progress</th>
+        </tr>
+        <tr>
+            <td>gst</td>
+            <td>git status</td>
+        </tr>
+        <tr>
+            <td>gss</td>
+            <td>git status -s</td>
+        </tr>
+        <tr>
+            <td>gsta</td>
+            <td>git stash save</td>
+        </tr>
+        <tr>
+            <td>gstaa</td>
+            <td>git stash apply</td>
+        </tr>
+        <tr>
+            <td>gstd</td>
+            <td>git stash drop</td>
+        </tr>
+        <tr>
+            <td>gstl</td>
+            <td>git stash list</td>
+        </tr>
+        <tr>
+            <td>grh</td>
+            <td>git reset HEAD</td>
+        </tr>
+        <tr>
+            <td>grhh</td>
+            <td>git reset HEAD --hard</td>
+        </tr>
+        <tr>
+            <td>gclean</td>
+            <td>git clean -fd</td>
+        </tr>
+        <tr>
+            <td>gpristine</td>
+            <td>git reset --hard &amp;&amp; git clean -dfx</td>
+        </tr>
+        <tr>
+            <td>gwip</td>
+            <td>git add -A; git ls-files --deleted -z | xargs -r0 git rm; git commit -m "--wip--"</td>
+        </tr>
+        <tr>
+            <td>gunwip</td>
+            <td>git log -n 1 | grep -q -c "--wip--" &amp;&amp; git reset HEAD~1</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Logs</th>
+        </tr>
+        <tr>
+            <td>glg</td>
+            <td>git log --stat --max-count = 10</td>
+        </tr>
+        <tr>
+            <td>glgg</td>
+            <td>git log --graph --max-count = 10</td>
+        </tr>
+        <tr>
+            <td>glgga</td>
+            <td>git log --graph --decorate --all</td>
+        </tr>
+        <tr>
+            <td>glo</td>
+            <td>git log --oneline --decorate --color</td>
+        </tr>
+        <tr>
+            <td>glog</td>
+            <td>git log --oneline --decorate --color --graph</td>
+        </tr>
+        <tr>
+            <td>glp</td>
+            <td>git log --pretty=$1</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Rewriting History</th>
+        </tr>
+        <tr>
+            <td>grbi</td>
+            <td>git rebase -i</td>
+        </tr>
+        <tr>
+            <td>grba</td>
+            <td>git rebase --abort</td>
+        </tr>
+        <tr>
+            <td>grbc</td>
+            <td>git rebase --continue</td>
+        </tr>
+        <tr>
+            <td>grbs</td>
+            <td>git rebase --skip</td>
+        </tr>
+        <tr>
+            <td>gcp</td>
+            <td>git cherry-pick</td>
+        </tr>
+        <tr>
+            <td>gcpa</td>
+            <td>git cherry-pick --abort</td>
+        </tr>
+        <tr>
+            <td>gcpc</td>
+            <td>git cherry-pick --continue</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">What changed?</th>
+        </tr>
+        <tr>
+            <td>gbl</td>
+            <td>git blame -b -w</td>
+        </tr>
+        <tr>
+            <td>gbs</td>
+            <td>git bisect</td>
+        </tr>
+        <tr>
+            <td>gbsb</td>
+            <td>git bisect bad</td>
+        </tr>
+        <tr>
+            <td>gbsg</td>
+            <td>git bisect good</td>
+        </tr>
+        <tr>
+            <td>gbsr</td>
+            <td>git bisect reset</td>
+        </tr>
+        <tr>
+            <td>gbss</td>
+            <td>git bisect start</td>
+        </tr>
+        <tr>
+            <td>gd</td>
+            <td>git diff</td>
+        </tr>
+        <tr>
+            <td>gdca</td>
+            <td>git diff --cached</td>
+        </tr>
+        <tr>
+            <td>gdt</td>
+            <td>git diff-tree --no-commit-id --name-only -r</td>
+        </tr>
+        <tr>
+            <td>gdw</td>
+            <td>git diff --word-diff</td>
+        </tr>
+        <tr>
+            <td>gwch</td>
+            <td>git whatchanged -p --abbrev-commit --pretty = medium</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">UI Tools &amp; SVN</th>
+        </tr>
+        <tr>
+            <td>gg</td>
+            <td>git gui citool</td>
+        </tr>
+        <tr>
+            <td>gga</td>
+            <td>git gui citool --amend</td>
+        </tr>
+        <tr>
+            <td>gk</td>
+            <td>gitk --all --branches</td>
+        </tr>
+        <tr>
+            <td>gsd</td>
+            <td>git svn dcommit</td>
+        </tr>
+        <tr>
+            <td>gsr</td>
+            <td>git svn rebase</td>
+        </tr>
+        <tr>
+            <td>git-svn-dcommit-push</td>
+            <td>git svn dcommit &amp;&amp; git push github master:svntrunk</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Miscellaneous</th>
+        </tr>
+        <tr>
+            <td>gcf</td>
+            <td>git config --list</td>
+        </tr>
+        <tr>
+            <td>gcount</td>
+            <td>git shortlog -sn</td>
+        </tr>
+        <tr>
+            <td>gdct</td>
+            <td>git describe --tags `git rev-list --tags --max-count=1`</td>
+        </tr>
+        <tr>
+            <td>gignore</td>
+            <td>git update-index --assume-unchanged</td>
+        </tr>
+        <tr>
+            <td>gunignore</td>
+            <td>git update-index --no-assume-unchanged</td>
+        </tr>
+        <tr>
+            <td>gignored</td>
+            <td>git ls-files -v | grep "^[[:lower:]]"</td>
+        </tr>
+        <tr>
+            <td>gts</td>
+            <td>git tag -s</td>
+        </tr>
+        <tr>
+            <td>gvt</td>
+            <td>git verify-tag</td>
+        </tr>
+        <tr>
+            <td>gtv</td>
+            <td>git tag | sort -V</td>
+        </tr>
+        <tr>
+            <td>gsps</td>
+            <td>git show --pretty = short --show-signature</td>
+        </tr>
+        <tr>
+            <td>grt</td>
+            <td>cd $(git rev-parse --show-toplevel || echo ".")</td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
+
