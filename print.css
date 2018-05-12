@@ -1,0 +1,13 @@
+body {
+    width: 297mm;
+    height: 209mm;
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+/* We don't want to display the headers' */
+header {
+    display: none;
+}

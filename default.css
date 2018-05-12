@@ -1,24 +1,21 @@
 body {
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono', Arial, sans-serif;
 }
-
-/*.container {*/
-/*display: flex;*/
-/*flex-direction: column;*/
-/*flex-wrap: wrap;*/
-/*height: 100%;*/
-/*width: 100%;*/
-/*align-content: space-between;*/
-/*}*/
 
 .container {
-    width: 100%;
-    -webkit-columns: 3 400px;
-    -moz-columns: 3 400px;
-    columns: 3 400px;
+    -webkit-columns: 4 500px;
+    -moz-columns: 4 500px;
+    columns: 4 500px;
 }
 
-.header {
+header {
+    text-align: center;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -28,10 +25,9 @@ table {
     break-inside: avoid;
     width: 90%;
     color: #333;
-    font-family: Roboto Mono, Arial, sans-serif;
     border-collapse: collapse;
     border-spacing: 0;
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,4 +47,6 @@ td {
     font-size: 0.75em;
 }
 
-
+td:first-child {
+    width: 70px;
+}
