@@ -1,15 +1,67 @@
+:root {
+    --black: #2B2C27;
+
+    --orange: #FD971F;
+    --blue: #66D9EF;
+    --green: #A6E22E;
+    --red: #F92672;
+    --violet: #b791ff;
+    --turqouise: #A1EFE4;
+    --white: #F8F8F2;
+
+    --light-red: #FC5C94;
+    --light-orange: #FEB257;
+    --light-blue: #8DE6F7;
+    --light-violet: #C2A1FF;
+    --light-turquoise: #BBF7EF;
+    --light-white: #F8F8F0;
+    --light-green: #C1F161;
+
+    --table-text-color: var(--green);
+    --table-border-color: var(--green);
+    --header-color: var(--orange);
+    --footer-color: var(--orange)
+}
+
 body {
     font-family: 'Roboto Mono', Arial, sans-serif;
+    background: var(--black);
+    font-size: 1em;
+
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.99);
+    color: #FFF;
+}
+
+::-moz-selection {
+    background: rgba(0, 0, 0, 0.99);
+    color: #FFF;
 }
 
 .container {
     -webkit-columns: 4 500px;
     -moz-columns: 4 500px;
     columns: 4 500px;
+
 }
 
 header {
+    padding-top: 15px;
     text-align: center;
+    height: 200px;
+    color: var(--header-color);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+a {
+    text-decoration: underline;
+    font-style: normal;
+    color: var(--orange);
 }
 
 footer {
@@ -17,6 +69,18 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    margin: auto;
+    color: var(--footer-color);
+}
+
+footer .copyright {
+    padding-left: 1em;
+    float: left;
+}
+
+footer .github {
+    padding-right: 1em;
+    float: right;
 }
 
 table {
@@ -24,7 +88,7 @@ table {
     page-break-inside: avoid;
     break-inside: avoid;
     width: 90%;
-    color: #333;
+    color: var(--table-text-color);
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 20px;
@@ -33,20 +97,68 @@ table {
 }
 
 td, th {
-    border: 1px solid #CCC;
-    height: 30px;
+    border: 2px dashed var(--table-border-color);
+    height: 35px;
 }
 
 th {
-    background: #F3F3F3;
     font-weight: bold;
 }
 
 td {
-    background: #FAFAFA;
-    font-size: 0.75em;
+    padding-left: 1.3em;
 }
 
 td:first-child {
     width: 70px;
+}
+
+#add-and-commit {
+    --table-text-color: var(--light-blue);
+    --table-border-color: var(--blue);
+}
+
+#checkout-and-branch {
+    --table-text-color: var(--light-green);
+    --table-border-color: var(--green);
+}
+
+#clone-push-fetch {
+    --table-text-color: var(--light-red);
+    --table-border-color: var(--red);
+}
+
+#remotes {
+    --table-text-color: var(--light-violet);
+    --table-border-color: var(--violet);
+}
+
+#work-in-progress {
+    --table-text-color: var(--turqouise);
+    --table-border-color: var(--light-turquoise);
+}
+
+#logs {
+    --table-text-color: var(--light-orange);
+    --table-border-color: var(--orange);
+}
+
+#rewriting-history {
+    --table-text-color: var(--light-white);
+    --table-border-color: var(--white);
+}
+
+#what-changed {
+    --table-text-color: var(--light-green);
+    --table-border-color: var(--green);
+}
+
+#ui-tools {
+    --table-text-color: var(--light-white);
+    --table-border-color: var(--white);
+}
+
+#miscellaneous {
+    --table-text-color: var(--light-red);
+    --table-border-color: var(--red);
 }

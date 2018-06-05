@@ -1,13 +1,23 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
     <link href="default.css" rel="stylesheet">
     <link href="print.css" rel="stylesheet" media="print">
 </head>
 <body>
-<header class="header"><h2>Git Aliases Cheatsheet</h2><p>Inspired by the Oh My Zsh Git Plugin. Print or download the PDF.</p></header>
+<header class="header">
+
+    <h1>Git Aliases Cheatsheet</h1>
+    <h3 class="subheader">Inspired by the Oh-My-Zsh <a
+            href="https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh">Git Plugin</a>.
+        Print or download the <a href="#">PDF</a>.</h3>
+
+</header>
+
 <div class="container">
-    <table>
+    <table id="add-and-commit">
         <tr>
             <th colspan="2">Add &amp; Commit</th>
         </tr>
@@ -69,7 +79,7 @@
         </tr>
     </table>
 
-    <table>
+    <table id="checkout-and-branch">
 
         <tr>
             <th colspan="2">Checkout &amp; Branch</th>
@@ -103,7 +113,36 @@
             <td>git branch --set-upstream-to=origin/$(current_branch)</td>
         </tr>
     </table>
-    <table>
+    <table id="logs">
+        <tr>
+            <th colspan="2">Logs</th>
+        </tr>
+        <tr>
+            <td>glg</td>
+            <td>git log --stat --max-count = 10</td>
+        </tr>
+        <tr>
+            <td>glgg</td>
+            <td>git log --graph --max-count = 10</td>
+        </tr>
+        <tr>
+            <td>glgga</td>
+            <td>git log --graph --decorate --all</td>
+        </tr>
+        <tr>
+            <td>glo</td>
+            <td>git log --oneline --decorate --color</td>
+        </tr>
+        <tr>
+            <td>glog</td>
+            <td>git log --oneline --decorate --color --graph</td>
+        </tr>
+        <tr>
+            <td>glp</td>
+            <td>git log --pretty=$1</td>
+        </tr>
+    </table>
+    <table id="clone-push-fetch">
         <tr>
             <th colspan="2">Clone, Push, Fetch, Pull and Merge</th>
         </tr>
@@ -192,7 +231,7 @@
             <td>Git merge --abort</td>
         </tr>
     </table>
-    <table>
+    <table id="remotes">
         <tr>
             <th colspan="2">Remotes</th>
         </tr>
@@ -221,7 +260,7 @@
             <td>git remote update</td>
         </tr>
     </table>
-    <table>
+    <table id="work-in-progress">
         <tr>
             <th colspan="2">Work in Progress</th>
         </tr>
@@ -274,36 +313,8 @@
             <td>git log -n 1 | grep -q -c "--wip--" &amp;&amp; git reset HEAD~1</td>
         </tr>
     </table>
-    <table>
-        <tr>
-            <th colspan="2">Logs</th>
-        </tr>
-        <tr>
-            <td>glg</td>
-            <td>git log --stat --max-count = 10</td>
-        </tr>
-        <tr>
-            <td>glgg</td>
-            <td>git log --graph --max-count = 10</td>
-        </tr>
-        <tr>
-            <td>glgga</td>
-            <td>git log --graph --decorate --all</td>
-        </tr>
-        <tr>
-            <td>glo</td>
-            <td>git log --oneline --decorate --color</td>
-        </tr>
-        <tr>
-            <td>glog</td>
-            <td>git log --oneline --decorate --color --graph</td>
-        </tr>
-        <tr>
-            <td>glp</td>
-            <td>git log --pretty=$1</td>
-        </tr>
-    </table>
-    <table>
+
+    <table id="rewriting-history">
         <tr>
             <th colspan="2">Rewriting History</th>
         </tr>
@@ -336,7 +347,7 @@
             <td>git cherry-pick --continue</td>
         </tr>
     </table>
-    <table>
+    <table id="what-changed">
         <tr>
             <th colspan="2">What changed?</th>
         </tr>
@@ -385,7 +396,7 @@
             <td>git whatchanged -p --abbrev-commit --pretty = medium</td>
         </tr>
     </table>
-    <table>
+    <table id="ui-tools">
         <tr>
             <th colspan="2">UI Tools &amp; SVN</th>
         </tr>
@@ -414,7 +425,7 @@
             <td>git svn dcommit &amp;&amp; git push github master:svntrunk</td>
         </tr>
     </table>
-    <table>
+    <table id="miscellaneous">
         <tr>
             <th colspan="2">Miscellaneous</th>
         </tr>
@@ -464,7 +475,10 @@
         </tr>
     </table>
 </div>
-<footer class="">Footer content goes here</footer>
+<footer><p class="copyright">Written by <a href="https://twitter.com/hschnedlitz">@hschnedlitz</a>
+    <p class="github">Source on <a href="https://github.com/hschne/git-aliases">Github</a></p>
+    <div style="clear: both"></div>
+</footer>
 </body>
 
 </html>
