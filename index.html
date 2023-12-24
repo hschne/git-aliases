@@ -34,26 +34,6 @@
           <td>git add --all</td>
         </tr>
         <tr>
-          <td>gam</td>
-          <td>git am</td>
-        </tr>
-        <tr>
-          <td>gama</td>
-          <td>git am --abort</td>
-        </tr>
-        <tr>
-          <td>gamc</td>
-          <td>git am --continue</td>
-        </tr>
-        <tr>
-          <td>gams</td>
-          <td>git am --skip</td>
-        </tr>
-        <tr>
-          <td>gamscp</td>
-          <td>git am --show-current-patch</td>
-        </tr>
-        <tr>
           <td>gapa</td>
           <td>git add --patch</td>
         </tr>
@@ -98,14 +78,6 @@
           <td>git commit --all --message</td>
         </tr>
         <tr>
-          <td>gcas</td>
-          <td>git commit --all --signoff</td>
-        </tr>
-        <tr>
-          <td>gcasm</td>
-          <td>git commit --all --signoff --message</td>
-        </tr>
-        <tr>
           <td>gcsm</td>
           <td>git commit --signoff --message</td>
         </tr>
@@ -116,14 +88,6 @@
         <tr>
           <td>gcs</td>
           <td>git commit --gpg-sign</td>
-        </tr>
-        <tr>
-          <td>gcss</td>
-          <td>git commit --gpg-sign --signoff</td>
-        </tr>
-        <tr>
-          <td>gcssm</td>
-          <td>git commit --gpg-sign --signoff --message</td>
         </tr>
       </table>
 
@@ -165,14 +129,6 @@
           <td>git branch --delete --force</td>
         </tr>
         <tr>
-          <td>gbda</td>
-          <td><em>ƒ()</em> delete all branches</td>
-        </tr>
-        <tr>
-          <td>gbds</td>
-          <td><em>ƒ()</em> delete all merged branches</td>
-        </tr>
-        <tr>
           <td>gbgd</td>
           <td>LANG=C git branch --no-color -vv | grep ": gone\]" | awk '"'"'{print $1}'"'"' | xargs git branch -d</td>
         </tr>
@@ -189,52 +145,12 @@
           <td>git branch --no-merged</td>
         </tr>
         <tr>
-          <td>gbg</td>
-          <td>LANG=C git branch -vv | grep ": gone\]"</td>
-        </tr>
-        <tr>
           <td>gbr</td>
           <td>git branch --remote</td>
         </tr>
         <tr>
           <td>ggsup</td>
-          <td>git branch --set-upstream-to=origin/$(current_branch)</td>
-        </tr>
-        <tr>
-          <td>gsw</td>
-          <td>git switch</td>
-        </tr>
-        <tr>
-          <td>gswc</td>
-          <td>git switch --create</td>
-        </tr>
-        <tr>
-          <td>gswd</td>
-          <td>git switch $(git_develop_branch)</td>
-        </tr>
-        <tr>
-          <td>gswm</td>
-          <td>git switch $(git_main_branch)</td>
-        </tr>
-        <tr>
-          <td>gwt</td>
-          <td>git worktree</td>
-        </tr>
-        <tr>
-          <td>gwta</td>
-          <td>git worktree add</td>
-        </tr>
-        <tr>
-          <td>gwtls</td>
-          <td>git worktree list</td>
-        </tr>
-        <tr>
-          <td>gwtmv</td>
-          <td>git worktree move</td>
-        </tr>
-        <tr>
-          <td>gwtrm</td>
-          <td>git worktree remove</td>
+          <td>git branch --set-upstream-to=origin/$(git_current_branch)</td>
         </tr>
       </table>
       <table id="logs">
@@ -246,36 +162,12 @@
           <td>git log --stat</td>
         </tr>
         <tr>
-          <td>glgp</td>
-          <td>git log --stat --patch</td>
-        </tr>
-        <tr>
           <td>glgg</td>
           <td>git log --graph --max-count = 10</td>
         </tr>
         <tr>
           <td>glgga</td>
           <td>git log --graph --decorate --all</td>
-        </tr>
-        <tr>
-          <td>glgm</td>
-          <td>git log --graph --max-count=10</td>
-        </tr>
-        <tr>
-          <td>glods</td>
-          <td>git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset" --date=short</td>
-        </tr>
-        <tr>
-          <td>glod</td>
-          <td>git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset"</td>
-        </tr>
-        <tr>
-          <td>glola</td>
-          <td>git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all</td>
-        </tr>
-        <tr>
-          <td>glols</td>
-          <td>git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all</td>
         </tr>
         <tr>
           <td>glol</td>
@@ -327,24 +219,16 @@
           <td>git push --force</td>
         </tr>
         <tr>
-          <td>ggf</td>
-          <td>git push --force origin $(current_branch)</td>
-        </tr>
-        <tr>
-          <td>ggfl</td>
-          <td>git push --force-with-lease origin $(current_branch)</td>
-        </tr>
-        <tr>
           <td>ggp</td>
-          <td>git push origin $(current_branch), see <em>ƒ()</em></td>
+          <td>git push origin $(git_current_branch), see <em>ƒ()</em></td>
         </tr>
         <tr>
           <td>ggpush</td>
-          <td>git push origin $(current_branch)</td>
+          <td>git push origin $(git_current_branch)</td>
         </tr>
         <tr>
           <td>gpsup</td>
-          <td>git push --set-upstream origin $(current_branch)</td>
+          <td>git push --set-upstream origin $(git_current_branch)</td>
         </tr>
         <tr>
           <td>gpoat</td>
@@ -353,18 +237,6 @@
         <tr>
           <td>gpod</td>
           <td>git push origin --delete</td>
-        </tr>
-        <tr>
-          <td>gpu</td>
-          <td>git push upstream</td>
-        </tr>
-        <tr>
-          <td>gpv</td>
-          <td>git push --verbose</td>
-        </tr>
-        <tr>
-          <td>gf</td>
-          <td>git fetch</td>
         </tr>
         <tr>
           <td>gfa</td>
@@ -387,36 +259,16 @@
           <td>git pull --rebase -v</td>
         </tr>
         <tr>
-          <td>gpra</td>
-          <td>git pull --rebase --autostash</td>
-        </tr>
-        <tr>
-          <td>gprav</td>
-          <td>git pull --rebase --autostash -v</td>
-        </tr>
-        <tr>
-          <td>gprom</td>
-          <td>git pull --rebase origin $(git_main_branch)</td>
-        </tr>
-        <tr>
-          <td>gpromi</td>
-          <td>git pull --rebase=interactive orign $(git_main_branch)</td>
-        </tr>
-        <tr>
-          <td>ggpull</td>
-          <td>git pull origin $(current_branch)</td>
-        </tr>
-        <tr>
           <td>ggl</td>
-          <td>git pull origin $(current_branch)</td>
+          <td>git pull origin $(git_current_branch)</td>
         </tr>
         <tr>
           <td>ggpur</td>
-          <td>git pull --rebase origin $(current_branch)</td>
+          <td>git pull --rebase origin $(git_current_branch)</td>
         </tr>
         <tr>
           <td>gluc</td>
-          <td>git pull upstream $(current_branch)</td>
+          <td>git pull upstream $(git_current_branch)</td>
         </tr>
         <tr>
           <td>glum</td>
@@ -424,27 +276,7 @@
         </tr>
         <tr>
           <td>ggpnp</td>
-          <td>git pull origin $(current_branch) &amp;&amp; git push origin $(current_branch)</td>
-        </tr>
-        <tr>
-          <td>gm</td>
-          <td>git merge</td>
-        </tr>
-        <tr>
-          <td>gmom</td>
-          <td>git merge origin/$(git_main_branch)</td>
-        </tr>
-        <tr>
-          <td>gmtl</td>
-          <td>git mergetool --no-prompt</td>
-        </tr>
-        <tr>
-          <td>gmtvim</td>
-          <td>git mergetool --no-prompt --tool=vimdiff</td>
-        </tr>
-        <tr>
-          <td>gmum</td>
-          <td>git merge upstream/$(git_main_branch)</td>
+          <td>git pull origin $(git_current_branch) &amp;&amp; git push origin $(git_current_branch)</td>
         </tr>
         <tr>
           <td>gm</td>
@@ -457,6 +289,22 @@
         <tr>
           <td>gms</td>
           <td>git merge --squash</td>
+        </tr>
+        <tr>
+          <td>gmom</td>
+          <td>git merge origin/$(git_main_branch)</td>
+        </tr>
+        <tr>
+          <td>gmum</td>
+          <td>git merge upstream/$(git_main_branch)</td>
+        </tr>
+        <tr>
+          <td>gmtl</td>
+          <td>git mergetool --no-prompt</td>
+        </tr>
+        <tr>
+          <td>gmtvim</td>
+          <td>git mergetool --no-prompt --tool=vimdiff</td>
         </tr>
       </table>
       <table id="remotes">
@@ -505,14 +353,6 @@
           <td>git status --short</td>
         </tr>
         <tr>
-          <td>gsb</td>
-          <td>git status --short --branch</td>
-        </tr>
-        <tr>
-          <td>gstall</td>
-          <td>git stash --all</td>
-        </tr>
-        <tr>
           <td>gstaa</td>
           <td>git stash apply</td>
         </tr>
@@ -549,32 +389,12 @@
           <td>git reset</td>
         </tr>
         <tr>
-          <td>gru</td>
-          <td>git reset --</td>
-        </tr>
-        <tr>
           <td>grhh</td>
           <td>git reset --hard</td>
         </tr>
         <tr>
-          <td>grhk</td>
-          <td>git reset --keep</td>
-        </tr>
-        <tr>
-          <td>grhs</td>
-          <td>git reset --soft</td>
-        </tr>
-        <tr>
-          <td>groh</td>
-          <td>git reset origin/$(git_current_branch) --hard</td>
-        </tr>
-        <tr>
           <td>grs</td>
           <td>git restore</td>
-        </tr>
-        <tr>
-          <td>grss</td>
-          <td>git restore --source</td>
         </tr>
         <tr>
           <td>grst</td>
@@ -602,10 +422,7 @@
         <tr>
           <th colspan="2">Rewriting History</th>
         </tr>
-        <tr>
-          <td>grb</td>
-          <td>git rebase</td>
-        </tr>
+
         <tr>
           <td>grba</td>
           <td>git rebase --abort</td>
@@ -615,33 +432,12 @@
           <td>git rebase --continue</td>
         </tr>
         <tr>
-          <td>grbd</td>
-          <td>git rebase $(git_develop_branch)</td>
-        </tr>
-        <tr>
           <td>grbi</td>
           <td>git rebase --interactive</td>
         </tr>
         <tr>
-          <td>grbm</td>
-          <td>git rebase $(git_main_branch)</td>
-        </tr>
-        <tr>
-          <td>grbo</td>
-          <td>git rebase --onto</td>
-        </tr>
-        <tr>
-          <td>grbom</td>
-          <td>git rebase origin/$(git_main_branch)</td>
-        </tr>
-        <tr>
-        <tr>
           <td>grbs</td>
           <td>git rebase --skip</td>
-        </tr>
-        <tr>
-          <td>grev</td>
-          <td>git revert</td>
         </tr>
         <tr>
           <td>grm</td>
@@ -685,14 +481,6 @@
           <td>git bisect good</td>
         </tr>
         <tr>
-          <td>gbsn</td>
-          <td>git bisect new</td>
-        </tr>
-        <tr>
-          <td>gbso</td>
-          <td>git bisect old</td>
-        </tr>
-        <tr>
           <td>gbsr</td>
           <td>git bisect reset</td>
         </tr>
@@ -709,10 +497,6 @@
           <td>git diff --cached</td>
         </tr>
         <tr>
-          <td>gdcw</td>
-          <td>git diff --cached--word-diff</td>
-        </tr>
-        <tr>
           <td>gds</td>
           <td>git diff --staged</td>
         </tr>
@@ -725,20 +509,8 @@
           <td>git diff --word-diff</td>
         </tr>
         <tr>
-          <td>gdv</td>
-          <td><em>ƒ()</em> word-diff pipe to <code>view</code></td>
-        </tr>
-        <tr>
-          <td>gdu</td>
-          <td>git diff @{upstream}</td>
-        </tr>
-        <tr>
           <td>gdnolock</td>
           <td><em>ƒ()</em> exclude lock files, e.g., package-lock.json</td>
-        </tr>
-        <tr>
-          <td>gdt</td>
-          <td>git diff-tree --no-commit-id --name-only -r</td>
         </tr>
         <tr>
           <td>gwch</td>
@@ -762,10 +534,6 @@
           <td>gitk --all --branches &!</td>
         </tr>
         <tr>
-          <td>gke</td>
-          <td>gitk --all $(git log --walk-reflogs --pretty=%h) &!</td>
-        </tr>
-        <tr>
           <td>gsd</td>
           <td>git svn dcommit</td>
         </tr>
@@ -785,10 +553,6 @@
         <tr>
           <td>gap</td>
           <td>git apply</td>
-        </tr>
-        <tr>
-          <td>gapt</td>
-          <td>git apply --3way</td>
         </tr>
         <tr>
           <td>gcf</td>
@@ -819,28 +583,8 @@
           <td>git ls-files -v | grep "^[[:lower:]]"</td>
         </tr>
         <tr>
-          <td>gfg</td>
-          <td>git ls-files | grep</td>
-        </tr>
-        <tr>
-          <td>gsh</td>
-          <td>git show</td>
-        </tr>
-        <tr>
           <td>gsps</td>
           <td>git show --pretty=short --show-signature</td>
-        </tr>
-        <tr>
-          <td>gsi</td>
-          <td>git submodule init</td>
-        </tr>
-        <tr>
-          <td>gsu</td>
-          <td>git submodule update</td>
-        </tr>
-        <tr>
-          <td>gta</td>
-          <td>git tag --annotate</td>
         </tr>
         <tr>
           <td>gtl</td>
@@ -867,4 +611,3 @@
   </body>
 
 </html>
-
